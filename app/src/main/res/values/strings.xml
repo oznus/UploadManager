@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UploadManagerSamples</string>
+    <string name="action_settings">Settings</string>
+    <string name="fill_url">Fill your url in UploadManagerActivity first</string>
+</resources>
