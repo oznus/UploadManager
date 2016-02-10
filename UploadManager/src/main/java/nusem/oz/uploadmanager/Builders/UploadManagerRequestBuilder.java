@@ -69,7 +69,12 @@ public class UploadManagerRequestBuilder  {
     }
 
     public UploadManagerRequestBuilder addHeader(NameValue header) {
-        this.mHeaders.add(header) ;
+        this.mHeaders.add(header);
+        return this;
+    }
+
+    public UploadManagerRequestBuilder addHeader(String key, String token) {
+        this.mHeaders.add(new NameValue(key,token));
         return this;
     }
 

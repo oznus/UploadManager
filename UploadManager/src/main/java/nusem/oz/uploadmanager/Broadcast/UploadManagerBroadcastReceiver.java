@@ -17,9 +17,9 @@ public abstract class UploadManagerBroadcastReceiver extends BroadcastReceiver {
 
     private static final String TAG = UploadManagerBroadcastReceiver.class.getSimpleName();
 
-    public abstract void onProgress(final String uploadId, final int progress);
-    public abstract void onError(final String uploadId, final Exception exception);
-    public abstract void onCompleted(final String uploadId, final int serverResponseCode, final String serverResponseMessage, String responceString);
+    public abstract void onProgress(final int uploadId, final int progress);
+    public abstract void onError(final int uploadId, final Exception exception);
+    public abstract void onCompleted(final int uploadId, final int serverResponseCode, final String serverResponseMessage, String responceString);
 
     public void register(Context context) {
         final IntentFilter intentFilter = new IntentFilter();
@@ -37,7 +37,7 @@ public abstract class UploadManagerBroadcastReceiver extends BroadcastReceiver {
         if (intent != null) {
             if (UploadService.Actions.BROADCAST_ACTION.equals(intent.getAction())) {
                 final int status = intent.getIntExtra(BroadcastLogic.STATUS, 0);
-                final String uploadId = intent.getStringExtra(UploadService.UPLOAD_ID);
+                final int uploadId = intent.getIntExtra(UploadService.UPLOAD_ID, 0);
 
                 Log.d(TAG, "onReceive uploadId - " + uploadId);
 

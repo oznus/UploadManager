@@ -47,12 +47,6 @@ public class UploadRequest {
         }
     }
 
-    public void setNotificationSettings(final int iconResourceID, final String title, final String message,
-                                        final String completed, final String error, final boolean autoClearOnSuccess) {
-        mNotificationSettings = new NotificationSettings(iconResourceID, title, message, completed, error,
-                                                          autoClearOnSuccess);
-    }
-
     public String getUploadManagerCallbackBlocksClassName() {
         return mUploadManagerCallbackBlocksClassName;
     }
