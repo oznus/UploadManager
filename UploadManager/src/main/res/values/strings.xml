@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">UploadManager</string>
-    <string name="notification_file_upload">File Upload</string>
-    <string name="notification_upload_in_progress">uploading in progress</string>
-    <string name="notification_upload_complete">upload completed successfully!</string>
-    <string name="notification_error_during_upload">error during upload</string>
-</resources>
